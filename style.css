@@ -1,0 +1,429 @@
+/* --- Visual Theme Custom Variables --- */
+:root {
+    --g-bg: #FAF9F5; /* Warm Ivory */
+    --g-surface: #FFFFFF;
+    --g-border: #D1D1CB;
+    --g-dark: #2B2B28;
+    --g-muted: #6E6E68;
+    --g-accent: #3A86C8; /* Soft Pastel Blue Accent */
+    --g-error: #D93838;
+    --g-success: #2E8A4F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--g-bg);
+    color: var(--g-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation Header --- */
+.graphic-header {
+    background-color: var(--g-surface);
+    border-bottom: 1px solid var(--g-border);
+}
+
+.graphic-navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.graphic-logo-mark {
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    color: var(--g-dark);
+}
+
+.graphic-navigation-links {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.graphic-navigation-links a {
+    text-decoration: none;
+    color: var(--g-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+}
+
+.graphic-navigation-links a:hover,
+.graphic-navigation-links a.active-item {
+    color: var(--g-accent);
+}
+
+/* --- Structural Core Viewport Container Panels --- */
+.graphic-body-container {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+}
+
+.flex-alignment-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.narrow-view-block {
+    max-width: 750px;
+}
+
+.graphic-block-heading {
+    font-size: 1.75rem;
+    font-weight: 750;
+    margin-bottom: 0.5rem;
+    color: var(--g-dark);
+}
+
+.graphic-block-desc-text {
+    color: var(--g-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+/* --- Layout Managers (Flexbox/Grid Assemblies) --- */
+.split-asymmetric-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.graphic-flex-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Unique Asymmetric Hero Layout --- */
+.graphic-hero-card {
+    display: flex;
+    background: var(--g-surface);
+    border: 1px solid var(--g-border);
+    border-radius: 8px;
+    padding: 3rem;
+    gap: 2.5rem;
+    box-shadow: 0 4px 12px rgba(43,43,40,0.03);
+}
+
+.graphic-round-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--g-bg);
+    outline: 1px solid var(--g-border);
+}
+
+.graphic-pill-badge {
+    display: inline-block;
+    background: #EAEAE4;
+    color: var(--g-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.hero-right-column h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+}
+
+.graphic-sub-intro {
+    font-size: 1.1rem;
+    color: var(--g-accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.graphic-body-p {
+    color: var(--g-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* --- About View Layout Additions --- */
+.graphic-text-spacing {
+    margin-bottom: 1.5rem;
+    line-height: 1.55;
+    color: #3B3B37;
+}
+
+.graphic-subheading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem 0;
+    color: var(--g-dark);
+}
+
+.graphic-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.graphic-custom-table th, .graphic-custom-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--g-border);
+}
+
+.graphic-custom-table th {
+    color: var(--g-dark);
+    font-weight: 700;
+}
+
+.graphic-badge-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cloud-badge {
+    background: var(--g-surface);
+    border: 1px solid var(--g-border);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.graphic-video-showcase { margin-top: 3rem; }
+.graphic-embedded-frame {
+    background: #111;
+    border-radius: 6px;
+    overflow: hidden;
+    line-height: 0;
+}
+.graphic-embedded-frame video { width: 100%; height: auto; }
+
+/* --- Showroom Component Cards --- */
+.graphic-showroom-card {
+    background: var(--g-surface);
+    border: 1px solid var(--g-border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.graphic-showroom-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--g-accent);
+}
+
+.showroom-image-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--g-border);
+}
+
+.showroom-card-details {
+    padding: 1.5rem;
+}
+
+.showroom-card-details h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.showroom-card-details p {
+    font-size: 0.85rem;
+    color: var(--g-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.showroom-link-anchor {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--g-dark);
+    text-decoration: none;
+}
+
+.showroom-link-anchor:hover {
+    color: var(--g-accent);
+}
+
+/* --- Planner Specific Structuring --- */
+.graphic-planner-card-box {
+    background: var(--g-surface);
+    border: 1px solid var(--g-border);
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.graphic-flex-form-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.graphic-flex-form-row input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--g-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.graphic-flex-form-row input:focus {
+    border-color: var(--g-accent);
+}
+
+.graphic-tracker-status-bar {
+    margin: 1.5rem 0 1rem 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--g-muted);
+    border-bottom: 1px dashed var(--g-border);
+    padding-bottom: 0.4rem;
+}
+
+.graphic-unordered-list-group {
+    list-style: none;
+}
+
+.graphic-row-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #EAEAE4;
+}
+
+.graphic-row-task:last-child {
+    border-bottom: none;
+}
+
+.graphic-row-task.task-done span {
+    text-decoration: line-through;
+    color: var(--g-muted);
+}
+
+.graphic-util-btn {
+    background: transparent;
+    border: 1px solid var(--g-border);
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.4rem;
+}
+
+.graphic-util-btn.opt-check:hover { border-color: var(--g-success); color: var(--g-success); }
+.graphic-util-btn.opt-trash:hover { border-color: var(--g-error); color: var(--g-error); }
+
+/* --- Styled Form Interface --- */
+.graphic-styled-form {
+    background: var(--g-surface);
+    border: 1px solid var(--g-border);
+    border-radius: 6px;
+    padding: 2.5rem;
+}
+
+.graphic-input-block {
+    margin-bottom: 1.25rem;
+}
+
+.graphic-input-block label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--g-dark);
+}
+
+.graphic-input-block input,
+.graphic-input-block textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--g-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    background: var(--g-bg);
+}
+
+.graphic-input-block input:focus,
+.graphic-input-block textarea:focus {
+    border-color: var(--g-accent);
+    background: var(--g-surface);
+}
+
+.graphic-alert-overlay-box {
+    background-color: #FFF2F2;
+    color: var(--g-error);
+    border: 1px solid #F2C2C2;
+    padding: 1rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.state-hidden { display: none; }
+
+/* --- Interactive Action Buttons --- */
+.graphic-button-row { display: flex; gap: 1rem; }
+.graphic-action-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.2s;
+}
+
+.graphic-action-btn.solid-color-btn { background: var(--g-dark); color: var(--g-surface); }
+.graphic-action-btn.solid-color-btn:hover { background: var(--g-accent); }
+.graphic-action-btn.transparent-outline-btn { background: transparent; color: var(--g-dark); border-color: var(--g-dark); }
+.graphic-action-btn.transparent-outline-btn:hover { background: var(--g-dark); color: var(--g-surface); }
+.stretch-btn { width: 100%; text-align: center; }
+
+.graphic-site-footer {
+    background-color: var(--g-surface);
+    border-top: 1px solid var(--g-border);
+    padding: 1.75rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--g-muted);
+}
+
+/* --- Mobile Display Breakpoints --- */
+@media (max-width: 800px) {
+    .graphic-navbar { flex-direction: column; gap: 1rem; text-align: center; }
+    .graphic-navigation-links { width: 100%; justify-content: space-around; }
+    .graphic-hero-card { flex-direction: column; align-items: center; text-align: center; padding: 2rem 1.5rem; }
+    .split-asymmetric-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .graphic-button-row { flex-direction: column; }
+}

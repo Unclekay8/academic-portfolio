@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker | Graphic Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="graphic-header">
+        <nav class="graphic-navbar">
+            <div class="graphic-logo-mark">ALEX.STUDIO</div>
+            <div class="graphic-navigation-links">
+                <a href="index.html">INDEX</a>
+                <a href="about.html">BIOGRAPHY</a>
+                <a href="projects.html">COLLECTIONS</a>
+                <a href="planner.html" class="active-item">TRACKER</a>
+                <a href="contact.html">MESSAGE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="graphic-body-container narrow-view-block">
+        <h2 class="graphic-block-heading">Milestone Tracker Module</h2>
+        <p class="graphic-block-desc-text">A tracking component utilizing structured DOM event captures to add, complete, or flush processing list objects dynamically.</p>
+
+        <section class="graphic-planner-card-box">
+            <div class="graphic-flex-form-row">
+                <input type="text" id="studioTaskInputField" placeholder="Enter upcoming item label details...">
+                <button id="studioTaskCommitTrigger" class="graphic-action-btn solid-color-btn">Queue Task</button>
+            </div>
+
+            <div class="graphic-tracker-status-bar">
+                <span>Task Array Output Pipeline</span>
+            </div>
+
+            <ul id="studioTasksDisplayArea" class="graphic-unordered-list-group">
+                <!-- Altered programmatically inside worker execution scripts -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="graphic-site-footer">
+        <p>&copy; 2026 Muhammad Adekunle.</p>
+    </footer>
+
+    <script src="planner.js"></script>
+</body>
+</html>
